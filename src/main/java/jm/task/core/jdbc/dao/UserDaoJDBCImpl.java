@@ -22,7 +22,6 @@ public class UserDaoJDBCImpl implements UserDao {
 
         try (Statement statement = Util.getConnection().createStatement() ) {
             statement.execute(query);
-            System.out.print("Таблица создана " + '\n');
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -33,7 +32,6 @@ public class UserDaoJDBCImpl implements UserDao {
 
         try (Statement statement = Util.getConnection().createStatement() ) {
             statement.execute(query);
-            System.out.println("Таблица удалена" + '\n');
         } catch (SQLException e) {
             e.printStackTrace();
         }
