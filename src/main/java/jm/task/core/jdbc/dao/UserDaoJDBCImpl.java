@@ -24,7 +24,7 @@ public class UserDaoJDBCImpl implements UserDao {
             statement.execute(query);
             System.out.print("Таблица создана " + '\n');
         } catch (SQLException e) {
-            e.getStackTrace();
+            e.printStackTrace();
         }
     }
 
