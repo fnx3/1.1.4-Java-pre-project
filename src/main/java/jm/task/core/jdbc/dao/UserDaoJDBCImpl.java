@@ -24,7 +24,7 @@ public class UserDaoJDBCImpl implements UserDao {
             statement.execute(query);
             System.out.print("Таблица создана " + '\n');
         } catch (SQLException e) {
-            throw new RuntimeException();
+            e.getStackTrace();
         }
     }
 
@@ -35,7 +35,7 @@ public class UserDaoJDBCImpl implements UserDao {
             statement.execute(query);
             System.out.println("Таблица удалена" + '\n');
         } catch (SQLException e) {
-            throw new RuntimeException();
+            e.printStackTrace();
         }
     }
 
@@ -61,7 +61,7 @@ public class UserDaoJDBCImpl implements UserDao {
         try (Statement statement = Util.getConnection().createStatement() ) {
             statement.executeUpdate(query);
         } catch (SQLException e) {
-            throw new RuntimeException();
+            e.printStackTrace();
         }
     }
 
@@ -77,7 +77,7 @@ public class UserDaoJDBCImpl implements UserDao {
             }
 
         } catch (SQLException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         return userList;
     }
@@ -88,7 +88,7 @@ public class UserDaoJDBCImpl implements UserDao {
         try (Statement statement = Util.getConnection().createStatement() ) {
             statement.execute(query);
         } catch (SQLException e) {
-            throw new RuntimeException();
+            e.printStackTrace();
         }
     }
 }
