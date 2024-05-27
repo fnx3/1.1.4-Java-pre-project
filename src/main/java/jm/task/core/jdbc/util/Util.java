@@ -9,7 +9,7 @@ public class Util {
     public static Connection getConnection() {
 
         try {
-            String dbPassword = "fcbfcc19001905G";
+            String dbPassword = "root";
             String dbUsername = "root";
             String dbURL = "jdbc:mysql://localhost/schemaOfUsers";
 
